@@ -22,14 +22,15 @@ PY3 = sys.version_info[0] == 3
 WINDOWS = sys.platform == 'win32' or sys.platform == 'cygwin'
 
 description = ("Thrift SASL Python module that implements SASL transports for "
-               "Thrift (`TSaslClientTransport`).")
+               "Thrift (`TSaslClientTransport`)."
+               "Based on version 0.2.1 and modified as detailed by ha62791 at https://github.com/cloudera/impyla/issues/238")
 
 setup(
     name='thrift_sasl',
-    version='0.4.1',
+    version='0.2.2',
     description=description,
     long_description=description,
-    url='https://github.com/cloudera/thrift_sasl',
+    url='https://github.com/captify-sfuller/thrift_sasl',
     install_requires=[
         # Python 3 support was added to thrift in version 0.10.0.
         'thrift>=0.10.0' if PY3 else 'thrift==0.9.3',
@@ -42,12 +43,5 @@ setup(
     keywords='thrift sasl transport',
     license='Apache License, Version 2.0',
     classifiers=[
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6']
+        'Programming Language :: Python :: 3.7']
 )
